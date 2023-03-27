@@ -1,0 +1,26 @@
+:root {
+    --primary: #e99401;
+    --black: #262626;
+    --white: #FFF;
+    --mainFont: 'Outfit', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 2rem;
+    font-family: var(--mainFont);
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+}
+
