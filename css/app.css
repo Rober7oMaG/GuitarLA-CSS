@@ -32,7 +32,7 @@ img {
     margin: 0 auto;
 }
 
-[class$="__heading"] {
+[class*="heading"] {
     font-size: 4rem;
     text-align: center;
     font-weight: 900;
@@ -210,7 +210,7 @@ img {
 
 .product__price {
     color: var(--primary);
-    font-size: 6rem;
+    font-size: 3rem;
     font-weight: 900;
     margin: 0;
 }
@@ -232,6 +232,47 @@ img {
 .product__link:hover {
     background-color: var(--primary);
     color: var(--white);
+}
+
+.product__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.product__label {
+    font-size: 2.2rem;
+    margin-right: 1rem;
+}
+
+.product__select {
+    border: 2px solid var(--primary);
+    padding: 1rem;
+    text-align: center;
+}
+
+.product__select:focus-visible {
+    border: none;
+    outline: 2px solid var(--primary);;
+}
+
+.product__add-to-cart {
+    display: block;
+    margin-top: 6rem;
+    background-color: var(--primary);
+    text-decoration: none;
+    text-transform: uppercase;
+    border: none;
+    text-align: center;
+    padding: 2rem 5rem;
+    color: var(--white);
+    font-size: 1.8rem;
+    font-weight: 700;
+    transition: background-color 300ms;
+}
+
+.product__add-to-cart:hover {
+    background-color: var(--black);
+    cursor: pointer;
 }
 
 /* Courses */
@@ -304,6 +345,15 @@ img {
     .blog__grid {
         grid-template-columns: repeat(4, 1fr);
     }
+
+    .blog__grid--page {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.entry {
+    max-width: 80rem;
+    margin: 0 auto;
 }
 
 .entry__content {
@@ -392,4 +442,17 @@ img {
 
 .footer__copyright {
     text-align: center;
+}
+
+/* About */
+.about__grid {
+    display: grid;
+    gap: 4rem;
+}
+
+@media (min-width: 768px) {
+    .about__grid {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
 }
